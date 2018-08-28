@@ -39,8 +39,6 @@ fed_patrons = []
 # use a while loop to to feed the hungry patrons with an even number
 # add the patrons with an even ticket number to the fed_patrons list
 # and remove the patrons from the line_of_hungry_patrons
-# if there are less than 17 fed_patrons, then feed the odd ticket number patrons
-# until there are 17 fed patrons
 ```
 
 ## Summary

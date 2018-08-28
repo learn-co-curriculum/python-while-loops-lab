@@ -17,6 +17,9 @@ slices_of_pie = 6
 slices_eaten = 0
 # use a while loop to eat each slice of pie
 # add eaxh slice to the slices_eaten variable
+while slices_of_pie > 0:
+    slices_of_pie -= 1
+    slices_eaten += 1
 ```
 
 
@@ -28,6 +31,16 @@ number_of_cooked_pancakes = 0
 # you must decrease the time_for_breakfast each time you 
 # add a pancake to the skilled or flip a pancake (i.e. 2 times per pancake)
 # there is only room for one pancake at a time
+while number_of_cooked_pancakes < 5:
+    if time_for_breakfast > 54:
+        print("pour flapjack")
+        time_for_breakfast -= 27
+        print("flip flapjack")
+        time_for_breakfast -= 27
+        print("that's a fine pancake")
+        number_of_cooked_pancakes += 1
+    else:
+        print("No time for more pancakes!! >:(")
 ```
 
 > **Hint:** You may find the [remove method](https://www.programiz.com/python-programming/methods/list/remove) to be useful for the next problem
@@ -39,9 +52,20 @@ fed_patrons = []
 # use a while loop to to feed the hungry patrons with an even number
 # add the patrons with an even ticket number to the fed_patrons list
 # and remove the patrons from the line_of_hungry_patrons
-# if there are less than 17 fed_patrons, then feed the odd ticket number patrons
-# until there are 17 fed patrons
+
+index = 0
+while len(fed_patrons) < len(line_of_hungry_patrons):
+    patron = line_of_hungry_patrons[index]
+    if patron % 2 == 0:
+        index += 1
+        fed_patrons.append(patron)
+        line_of_hungry_patrons.remove(patron)
+
+print(fed_patrons, line_of_hungry_patrons, len(fed_patrons))
 ```
+
+    [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28] [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29] 15
+
 
 ## Summary
 
